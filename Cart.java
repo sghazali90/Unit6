@@ -1,8 +1,13 @@
-
 public class Cart {
 
 	//Declare & Initialize Field(an empty array of Strings)
 	private String items[]= new String[0]; 
+	
+	
+	//getter method
+	public String[] getItems(){
+		return this.items;
+	}
 	
 	//Method to add items 
 	public void addItem(String item){
@@ -19,16 +24,6 @@ public class Cart {
 		
 		//Assign newItems as the updated items array/Field
 		items = newItems; 
-	}
-	
-	//method to print array to the screen
-	public static void printArray(String array[]){
-		for (int i = 0; i < array.length; i++) {
-			 if (i > 0) {
-				 System.out.print(", ");
-		         }
-			 System.out.print(array[i]);
-		      }
 	}
 	
 }
