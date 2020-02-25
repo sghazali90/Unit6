@@ -1,4 +1,3 @@
-
 import java.util.*; 
 
 public class Webstore {
@@ -15,9 +14,15 @@ public class Webstore {
 			//Ask user to enter item
 			System.out.println("Please enter an item: ");
 			
-			//Save item in a variable calledf itemName
+			//Save item in a variable called itemName
 			Scanner input= new Scanner(System.in);
 			String itemName = input.nextLine();
+			
+			//check if an item was entered and if not, break out of loop
+			if (itemName.equals("")){
+				shouldWeContinue='n';
+				break;
+			}
 			
 			//Ask user to enter item price
 			System.out.println("Please enter item price: $");
@@ -27,13 +32,7 @@ public class Webstore {
 			//Create an Item object w/ itemName and itemPrice Fields
 			Item newItem = new Item(itemName, itemPrice);
 			
-			if (itemName.equals("")){
-				shouldWeContinue='n';
-			}
-			else{
-				cart.addItem(newItem);
-			}
-			
+			cart.addItem(newItem);
 		}
 		System.out.println(cart.things);
 		
