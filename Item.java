@@ -8,4 +8,9 @@ public class Item {
 	name = n;
 	price = p;
 	}
+	
+	//toString method 
+	public String toString(){
+		return "Name: " + this.name + "\nPrice: $ " + this.price;
+	}
 }
